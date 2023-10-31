@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="searchBox.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <title>My website</title>
+</head>
+<body>
+    <header>
+        <div class="CBlogo" data-text= "--> first choice Global hotel booking !..."><a href="#"> <img src="CBlogo.png"></div>
+       <h2><a href="#" class="logo">Cambizs</a><i class="clue">TripLoger</i></h2>
+        <ul>
+            <li><a href="#" class="active">login/Sign up</a><span><i class="fa fa-angle-right" aria-hidden="true"></i></span></li>
+            <li><a href="#">Home</a><i class="fa fa-home" aria-hidden="true"></i></li>
+            <li><a href="#">Business</a><i class="fa fa-briefcase" aria-hidden="true"></i></li>
+            <li><a href="#">Deals</a><i class="fa fa-gift" aria-hidden="true"></i></li>
+            <li><a href="#">Destinations</a><i class="fa fa-plane" aria-hidden="true"></i></li>
+            <li><a href="#">Manage Booking</a><i class="fa fa-bed" aria-hidden="true"></i><a><b class="fa fa-chevron-circle-down" aria-hidden="true"></b></a>
+                <ul class="manage-booking"><em><span><i class="fa fa-angle-right" aria-hidden="true"></i></span>Insert Booking Ref.</em>
+                    <form action="input"><input type="textint" placeholder="Enter Reference..."></form>
+                    <a><button class="search-booking">Search</button></a>
+                </ul>
+            </li>
+             <!-- Add Tickets icon on dropdown menu here...<i class="fa fa-ticket" aria-hidden="true"></i> -->
+            <li><a href="#">Support</a><i class="fa fa-question" aria-hidden="true"></i></li>
+
+        </ul>
+
+    </header> 
+
+    
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>    
+    </div>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>  
+  <br>
+
+<!--  Search FORM Section -->
+    
+        <div class="row">
+            <div class="">
+                <h1 class="title1-Lightcenter">Where would you like to go...?</h1>
+            </div>
+        </div>
+
+         <div class="searchWidget">
+            <fieldset class="row1">
+                <div class="fieldLocation-col-sm-5-col-md-3">
+                    <label for="prepLocation"><b>Destination</b>:
+                    <div class="input-group">
+                        <a class="aLocation useCurrentLocation input-group-addon"><i class="iLocation"></i><span class="sr-only">current location</span></a>
+                        <input class="form-control-inverse-radius" type="text" name="location" placeholder=" city, postcode or hotel name..." value="" aria-controls="location" autocomplete="on" spellcheck="false">
+                        <input type="hidden" name="lat" value="">
+                        <input type="hidden" name="long" value="">
+                        <input type="hidden" name="action" value="search">
+                    </div>
+                   </label>
+                </div>
+            </fieldset>
+            </div>
+
+        <div class="fieldErrorMsg-fleft-mobHome-visible-xs-hide">
+          <div class="bannerslide1"><img src="Paris-Deal.jpeg" alt="Paris, 3-nigts, $19/night"></div><div class="bannertext"><h4>Paris, 3-nigts, <b>$19/night</b></h4></div>
+          <div class="bannerslide"><img src="Barcelona.jpeg" alt="Barcelona weekend, $22/night"></div><div class="bannertext"><h4>Barcelona weekend, <b>$22/night</b></h4></div>
+          <div class="bannerslide"><img src="ibis-edinburgh.jpeg" alt="ibis-edinburgh deal $37/night"></div><div class="bannertext"><h4>ibis-edinburgh deal <b>$37/night</b></h4></div>
+           
+          <div class="bannerslide4"><img src="tokyo.jpeg" alt="Luxury-Stay Japan/Tokyo from $147/night"></div><div class="bannertext"><h4>Luxury-Stay Tokyo from <b>$147/night</b></h4></div>
+          <div class="bannerslide"><img src="miami-cali.jpeg" alt="Fun-Stay at Miami Beach, from $55/night"></div><div class="bannertext"><h4>Fun-Stay; Miami Beach, <b>$55/night</b></h4></div>
+          <div class="bannerslide"><img src="ausi.jpeg" alt="Visit Australia, stay for $29/night"></div><div class="bannertext"><h4>Visit Australia, stay for <b>$29/night</b></h4></div>
+        </div>
+        <br>
+        
+<!-- The dots/circles -->
+        <div class="dots">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+        </div>
+      
+      </div>
+
+<div class="dynamic-search"> <!-- DYNAMIC SEARCH FORM Starts Here -->
+
+         
+            <!-- SB: Below html snippet needs to be added for number os nights count-->
+     <div class="search2">
+
+        <div class="fieldNights-non-mob-col-sm-1-hidden-xs">
+                <label class="control-label-required" for="overlayNights">Nights:</label>
+                <div class="nights-count-wrapper">
+                    <i class="iNightsDark"></i>
+                    <span class="inputText">0</span>
+
+        <div class="fieldRoomGuests col-xs-6 col-sm-2 col-md-2">
+                <label class="control-label required" for="roomGuestWrap">Rooms &amp; guests:</label>
+                <div class="roomGuestWrap show-pop" title="Rooms &amp; Guests" data-placement="vertical">
+
+                    <label class="labelRoom" for="mRoom"><span class="labelIconAccessibleRoom hide"><i class="iAccessibleRoom"></i></span><span class="labelIconRoom"><i class="iRoom"></i></span>
+                        <span class="hide">room</span>
+                    </label>
+                    <input disabled="disabled" type="text" id="mRoom" name="room" class="room" placeholder="1" value="">
+
+                    <label class="labelPerson" for="mGuest"><i class="iPerson"></i><span class="hide">guests</span></label>
+                    <input disabled="disabled" type="text" id="mGuest" name="guest" class="guest" placeholder="1" value="">
+                </div>
+        </div>   
+    </div>   
+
+        <div id="modalGuests" class="center">
+    <!-- ONLY MOBILE - TODO - use javascript to dynamically extract this from overlay -->
+                <!-- roomGuestSection
+depends: includeNumber
+-->
+       <div class="roomGuestSection fieldRooms col-xs-12">
+                <strong class="visible-xs title2">Rooms &amp; guests:</strong>
+            <div class="center">
+            <button type="button" class="btn btn-secondary btnDone center" data-dismiss="modal">
+           Done
+            </button>
+       </div>
+
+            <div class="rooms ">
+        
+                <div class="cloneItem">
+                <div class="row rowGuest1">
+                <div class="col-xs-10 col-sm-12">
+                    <div class="row rowGuest2">
+                       <div class="col-xs-12 colRoomNum">
+                            <p class="title2Light dynamic-label">
+                                Room 1
+                            </p>
+
+                </div>
+                        
+
+                        <div class="col-xs-6 ">
+                            <div class="select">
+                                <div class="dk-select rooms_adult" id="dk16"><div class="dk-selected " tabindex="0" id="dk16-combobox" aria-live="assertive" aria-owns="dk16-listbox" role="combobox">1 Adult</div><ul class="dk-select-options" id="dk16-listbox" role="listbox" aria-expanded="false"><li class="dk-option  dk-option-selected" data-value="1" role="option" aria-selected="true" id="dk16-1">1 Adult</li><li class="dk-option " data-value="2" role="option" aria-selected="false" id="dk16-2">2 Adults</li><li class="dk-option " data-value="3" role="option" aria-selected="false" id="dk16-3">3 Adults</li></ul></div><select name="rooms[0][adults]" required="required" class="rooms_adult" data-dkcacheid="16">
+                                                                            <option value="1" selected="selected">1 Adult</option>
+                                                                            <option value="2">2 Adults</option>
+                                                                            <option value="3">3 Adults</option>
+                                                                    </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 ">
+                            <div class="select">
+                                <div class="dk-select rooms_children" id="dk17"><div class="dk-selected " tabindex="0" id="dk17-combobox" aria-live="assertive" aria-owns="dk17-listbox" role="combobox">0 Children</div><ul class="dk-select-options" id="dk17-listbox" role="listbox" aria-expanded="false"><li class="dk-option  dk-option-selected" data-value="0" role="option" aria-selected="true" id="dk17-0">0 Children</li><li class="dk-option " data-value="1" role="option" aria-selected="false" id="dk17-1">1 Child</li><li class="dk-option " data-value="2" role="option" aria-selected="false" id="dk17-2">2 Children</li></ul></div><select name="rooms[0][children]" required="required" class="rooms_children" data-dkcacheid="17">
+                                                                        <option value="0" selected="selected">0 Children</option>
+                                                                        <option value="1">1 Child</option>
+                                                                        <option value="2">2 Children</option>
+                                                                    </select>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 options-container ">
+
+
+                            
+                            <input type="checkbox" id="rooms_0_accessible_include1" name="rooms[0][accessible]" class="rooms_accessible" value="1">
+
+                            <label class="forCheckbox" for="rooms_0_accessible_include1">
+
+                                <i class="iDisabled"></i>
+                                Accessible room</label>
+                        </div>
+                   </div>
+                </div>
+                <div class="col-xs-2 col-sm-4 colRemove">
+                    <button type="button" class="btn btn-block removeRoom">
+                        <span class="hidden-xs pull-right">
+                            <span class="btnText">Cancel room</span>
+                            <i class="iGuestX"></i>
+                        </span>
+                        <span class="visible-xs">X</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+            </div>
+</div>
+
+<br>
+    <div class="groupBookingInfo-importantInfo-hide">
+        <p>
+            <!--The second two links are to be placed directly one after the other as shown, the first is a title -->
+            This page does not support bookings for over 9 rooms. Please head over to our group booking page <a href="group-booking-link">CB-triplodger-group-booking</a>.
+        </p>
+    </div>
+
+    <div class="buttons center">
+
+       <button type="button" class="btn btn-secondary form-control addRoom">
+            <i class="iAdd"></i>
+           Add another room        </button>
+        <button type="button" class="btn btn-primary btnDone">Done</button>
+    </div>
+
+</div>
+            </div>
+
+            <div class="fieldCTA fieldCTA1 hidden-sm col-md-2">
+                <button type="submit" class="btn btn-primary prep_search btnSubmitSearch" aria-controls="bookingSearch_search">Search</button>
+            </div>
+            <div class="fieldErrorMsg fleft hide hidden-xs"><p class="marginLeftXXL">Please enter a location to search against</p></div>
+        </fieldset>
+
+        <div class="formErrors formErrors-hidden col-xs-12 importantInfo hidden-xs"></div>
+    </div> -->
+</div>
+<!--  END of DYNAMIC Search FORM Section -->
+
+
+
+<!-- Start HERO Section/Slide Container -->
+
+<div class="slideshow-container">
+    <!-- Full-width images with number and caption text -->
+    <!-- START -AutoNumberCounter-up -->   
+
+<div class="mini-container">
+
+    <div class="mySlides-fade">           
+        <div class="numbertext"></div>
+        <div class="mainIMG"><img src="African Triplodgers.jpeg" alt="AFRICA"></div>
+        <div class="Afrotext">AFRICA</div> 
+        </div>   
+     
+
+    <div class="mySlides-fade0">
+        <div class="numbertext"></div>
+        <div class="mainIMG0"><img src="European Triplodger.jpeg" style="width:100%" alt="EUROPE"></div>
+        <div class="Eurotext">EUROPE</div>
+    </div>
+          
+
+    <div class="mySlides-fade1">
+        <div class="numbertext"></div>
+        <div class="mainIMG1"><img src="North American Triplodger.jpeg" style="width:100%" alt="N. AMERICA"></div>
+        <div class="NAtext">N. AMERICA</div>
+    </div>
+   
+
+    <div class="mySlides-fade2">
+      <div class="numbertext"></div>
+      <div class="mainIMG2"><img src="Antartican Triplodger.jpeg" style="width:100%" alt="Antarctica"><div class="Antarctictext">ANTARCTICA</div>      
+    </div>
+
+    <div class="mySlides-fade3">
+      <div class="numbertext"></div>
+      <div clas="mainIMG3"><img src="South American Triplodger.jpeg" style="width:100%" alt="S. AMERICA"><div class="SAmtext">S. AMERICA</div>
+    </div>
+      
+
+    <div class="mySlides-fade4">
+      <div class="numbertext"></div>
+      <div class="mainIMG4"><img src="Australian Triplodger.jpeg" style="width:100%" alt="Australia"><div class="Auzitext">AUSTRALIA</div>
+    </div>
+      
+
+    <div class="mySlides-fade5">
+      <div class="numbertext"></div>
+      <div class="mainIMG5"><img src="Asian Triplodger.jpeg" style="width:100%" alt="ASIA">
+      <div class="Asiatext">ASIA</div>
+    </div>
+      
+ </div>
+
+ </div>
+<!-- close mini-container -->
+ 
+<!-- open paired images & co. --> 
+<div class="IMG-Pair">
+    <div class="mainIMG-Pair" style="width:100%"><img src="stars.jpeg">
+         <div class="text">Let's</div>
+    </div> 
+    <div class="mainIMG-Pair0"><img src="moon.jpeg" style="width:100%">
+        <h1>Hotel</h1>
+        <div class="text">Give</div>
+  </div>
+    <div><img src="mountain.jpeg" style="width:100%">
+        <h1><i class="clue">Short-Stay</i></h1>
+        <div class="text">You</div>  
+    </div>
+    <div><img src="mountains.jpeg" style="width:100%">
+        <div class="text">An</div>
+    </div>
+    <div><img src="river.jpeg" style="width:100%">
+        <h1>Business</h1>
+        <div class="text">Experience</div>
+    </div>
+    <div><img src="boat.jpeg" style="width:100%">
+        <h1><i class="clue">Fun</i></h1>
+        <div class="text">To</div>
+    </div>
+    <div><img src="mountainunder.jpeg" style="width: 100%">
+        <div class="text">Remember</div>
+    </div> 
+
+</div>
+<!-- close paired images & co. -->
+
+<!-- open stats boxes container-->
+    <div class="box">
+        <div class="box1">
+            <div class="icon"><i class="fas fa-history"></i></div>
+            <div class="counter">104</div>
+            <div class="text2">Today's Best Deals</div>
+        </div>
+        <div class="box2">
+           <div class="icon"><i class="fas fa-gift"></i></div>
+           <div class="counter">201</div>
+           <div class="text2">Reservations/week</div>
+       </div>
+       <div class="box3">
+       <div class="icon"><i class="fas fa-users"></i></div>
+          <div class="counter">166</div>
+          <div class="text2">Our Happy Clients</div>
+       </div>
+
+    </div>   
+<!--closing container class stats boxes -->
+</div>
+<!-- closing hero & slideshow-container -->
+
+</div>
+</div>
+</div>
+<!-- END -AutoNumberCounter-up -->
+  
+
+  <div class="listhere"><em>free listing here</em></div>
+<br>
+    <div id="deals">
+        <div class="brief"  style="height:100%">
+            <img src="ecoCambizs.jpeg" alt="Ethics&EcoStatement"> 
+            <p><b>HOTEL, B&B ➤ Owner-Rented Vacation Properties</b></p><br><br>
+            <h2><b>CAMBIZS </b><i>TRiPLodger</i> &nbsp; What We Stand For: </h2><br>
+            <ul>
+                <h1>OUR MISSION STATEMENT</h1>
+                <li><b>➤</b> &nbsp; Ethical Partnerships for Fair Pricing & Great Customer Service</li><br>
+                <li><b>➤</b> &nbsp; Ecologically Friendly Agreements, Helping Reduce CO2 emission</li><br>
+                <li><b>➤</b> &nbsp; Generating Momentum From Continuous Customer Feedback On Their Experience</li><br>
+                <li><b>➤</b> &nbsp; Giving You the Latest Safety Tips & Updates During Your Trip</li><br>
+            </ul>
+        
+            <div class="content3">
+                <div class="box2">
+                    <div class="icon2"><i class="fas fa-award"></i></div>
+                    <div class="counter2"><b>22</b>nd<span>in 2021</span></div>
+                    <div class="text3">Highly Rated Worldwide &copy 2022</div><br>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+<div class="dealsContainer"><h2>TODAY'S LOCAL DEALS</h2>
+  <div class="dealsX1">
+            <div class="dealsIMGline1"><br><br>           
+      <img src="Room1.jpeg" style="width:100%">
+      <h3>London SW12</h3>
+      <h4>Price: <i>$37</i> / Night</h4>
+      <div class="number">17 rooms Available</div>
+      <p>Swmming pool, treat Views, Transportation</p>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+           
+            
+      <img src="Room1.jpeg" style="width:100%">
+      <h3>London SW15</h3>
+      <h4>Price: <i>$37</i> / Night</h4>
+      <div class="number">17 rooms Available</div>
+      <p>Swmming pool, treat Views, Transportation</p>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+            
+            
+      <img src="Room1.jpeg" style="width:100%">
+      <h3>London SW19</h3>
+      <h4>Price: <i>$37</i> / Night</h4>
+      <div class="number">17 rooms Available</div>
+      <p>Swmming pool, treat Views, Transportation</p>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+            </div>
+  </div> 
+
+  <div class="dealsX1">
+            <div class="dealsIMGline2"><br><br>
+      <img src="Room1.jpeg" style="width:100%">
+      <h3>London SW12</h3>
+      <h4>Price: <i>$37</i> / Night</h4>
+      <div class="number">17 rooms Available</div>
+      <p>Swmming pool, treat Views, Transportation</p>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+             
+                 
+      <img src="Room1.jpeg" style="width:100%">
+      <h3>London SW15</h3>
+      <h4>Price: <i>$37</i> / Night</h4>
+      <div class="number">17 rooms Available</div>
+      <p>Swmming pool, treat Views, Transportation</p>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+            
+            
+      <img src="Room1.jpeg" style="width:100%">
+      <h3>London SW19</h3>
+      <h4>Price: <i>$37</i> / Night</h4>
+      <div class="number">17 rooms Available</div>
+      <p>Swmming pool, treat Views, Transportation</p>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+            </div>
+  </div> 
+  
+  <div class="dealsX1">
+            <div class="dealsIMGline3"><br><br>
+      <img src="Room1.jpeg" style="width:100%">
+      <h3>London SW12</h3>
+      <h4>Price: <i>$37</i> / Night</h4>
+      <div class="number">17 rooms Available</div>
+      <p>Swmming pool, treat Views, Transportation</p>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+           
+           
+      <img src="Room1.jpeg" style="width:100%">
+      <h3>London SW15</h3>
+      <h4>Price: <i>$37</i> / Night</h4>
+      <div class="number">17 rooms Available</div>
+      <p>Swmming pool, treat Views, Transportation</p>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+            
+            
+      <img src="Room1.jpeg" style="width:100%">
+      <h3>London SW19</h3>
+      <h4>Price: <i>$37</i> / Night</h4>
+      <div class="number">17 rooms Available</div>
+      <p>Swmming pool, treat Views, Transportation</p>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+            </div>
+  </div>
+
+  <div class="dealsContainerB-B"><h2>MOST POPULAR B&Bs </h2>
+    <div class="dealsX1">
+              <div class="dealsIMGline1"><br><br>           
+        <img src="Room1.jpeg" style="width:100%">
+        <h3>London SW12</h3>
+        <h4>Price: <i>$37</i> / Night</h4>
+        <div class="number">17 rooms Available</div>
+        <p>Swmming pool, treat Views, Transportation</p>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+             
+              
+        <img src="Room1.jpeg" style="width:100%">
+        <h3>London SW15</h3>
+        <h4>Price: <i>$37</i> / Night</h4>
+        <div class="number">17 rooms Available</div>
+        <p>Swmming pool, treat Views, Transportation</p>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+              
+              
+        <img src="Room1.jpeg" style="width:100%">
+        <h3>London SW19</h3>
+        <h4>Price: <i>$37</i> / Night</h4>
+        <div class="number">17 rooms Available</div>
+        <p>Swmming pool, treat Views, Transportation</p>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+              </div>
+    </div> 
+  </div>
+
+  <!--The div element for the map -->
+  <div id="map"></div>
+
+  <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&v=weekly"
+    async
+  ></script>
+ <!--The div element for the map Done-->
+
+
+</div>
+
+<div class="dealsContainer"><h2>CURRENT INTERNATIONAL DEALS</h2>
+  <div class="dealsX1">
+    <div class="dealsIMGline4"><br><br>           
+<img src="Room1.jpeg" style="width:100%">
+<h3>London SW12</h3>
+<h4>Price: <i>$37</i> / Night</h4>
+<div class="number">17 rooms Available</div>
+<p>Swmming pool, treat Views, Transportation</p>
+<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+   
+    
+<img src="Room1.jpeg" style="width:100%">
+<h3>London SW15</h3>
+<h4>Price: <i>$37</i> / Night</h4>
+<div class="number">17 rooms Available</div>
+<p>Swmming pool, treat Views, Transportation</p>
+<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+    
+    
+<img src="Room1.jpeg" style="width:100%">
+<h3>London SW19</h3>
+<h4>Price: <i>$37</i> / Night</h4>
+<div class="number">17 rooms Available</div>
+<p>Swmming pool, treat Views, Transportation</p>
+<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+    </div>
+</div> 
+
+<div class="dealsX1">
+    <div class="dealsIMGline5"><br><br>
+<img src="Room1.jpeg" style="width:100%">
+<h3>London SW12</h3>
+<h4>Price: <i>$37</i> / Night</h4>
+<div class="number">17 rooms Available</div>
+<p>Swmming pool, treat Views, Transportation</p>
+<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+     
+         
+<img src="Room1.jpeg" style="width:100%">
+<h3>London SW15</h3>
+<h4>Price: <i>$37</i> / Night</h4>
+<div class="number">17 rooms Available</div>
+<p>Swmming pool, treat Views, Transportation</p>
+<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+    
+    
+<img src="Room1.jpeg" style="width:100%">
+<h3>London SW19</h3>
+<h4>Price: <i>$37</i> / Night</h4>
+<div class="number">17 rooms Available</div>
+<p>Swmming pool, treat Views, Transportation</p>
+<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+    </div>
+</div> 
+
+<div class="dealsX1">
+    <div class="dealsIMGline6"><br><br>
+<img src="Room1.jpeg" style="width:100%">
+<h3>London SW12</h3>
+<h4>Price: <i>$37</i> / Night</h4>
+<div class="number">17 rooms Available</div>
+<p>Swmming pool, treat Views, Transportation</p>
+<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+   
+   
+<img src="Room1.jpeg" style="width:100%">
+<h3>London SW15</h3>
+<h4>Price: <i>$37</i> / Night</h4>
+<div class="number">17 rooms Available</div>
+<p>Swmming pool, treat Views, Transportation</p>
+<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+    
+    
+<img src="Room1.jpeg" style="width:100%">
+<h3>London SW19</h3>
+<h4>Price: <i>$37</i> / Night</h4>
+<div class="number">17 rooms Available</div>
+<p>Swmming pool, treat Views, Transportation</p>
+<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="dealsContainerVacHomes"><h2>BEST RATED VACATION HOMES</h2>
+  <div class="dealsX1">
+            <div class="dealsIMGline1"><br><br>           
+      <img src="Room1.jpeg" style="width:100%">
+      <h3>London SW12</h3>
+      <h4>Price: <i>$37</i> / Night</h4>
+      <div class="number">17 rooms Available</div>
+      <p>Swmming pool, treat Views, Transportation</p>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+           
+            
+      <img src="Room1.jpeg" style="width:100%">
+      <h3>London SW15</h3>
+      <h4>Price: <i>$37</i> / Night</h4>
+      <div class="number">17 rooms Available</div>
+      <p>Swmming pool, treat Views, Transportation</p>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+            
+            
+      <img src="Room1.jpeg" style="width:100%">
+      <h3>London SW19</h3>
+      <h4>Price: <i>$37</i> / Night</h4>
+      <div class="number">17 rooms Available</div>
+      <p>Swmming pool, treat Views, Transportation</p>
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel dicta quam autem illum alias esse?</span>
+            </div>
+  </div> 
+
+</div>    
+
+
+ 
+    
+<section id="sectionA">
+<div id="aboutTriplodger">  
+            <div class="ourVisits">
+                <img width="30" heigth="30" alt="" src="loveHeart.jpeg" loading="lazy"><br>
+                <span class="ourViits-text">1.3M people have already met someone via Cambizs MiaB. Is it your turn?</span>
+            </div>
+            <div class="ourEvents">
+                <img width="30" heigth="30" alt="" src="eventsIcon.png" loading="lazy"><br>
+                <span class="ourEvents-text">Attend our Themed Events that create Exciting dating occasions</span>
+            </div>
+            <div class="whyUs">
+                <img width="30" heigth="30" alt="" src="searchTool.jpeg" loading="lazy"><br>
+                <span class="whyUs-text">A powerful search tool that lets the Universe take control</span>
+            </div>
+            <div class="userFriendly">
+                <img width="30" heigth="30" alt="" src="textDating.jpeg" loading="lazy"><br>
+                <span class="userFriendly-text">Singles Mingle at a Respectable Pace</span>
+            </div>      
+</div>
+
+<div class="foot-container">
+    <div class="box1 Red">Red</div>   
+    <div class="box2 Green">Green</div> 
+    <div class="box3 Blue">Blue</div>                                  
+</div>
+
+</section>
+
+<!-- Start of LiveChat (www.livechatinc.com) code --> 
+<script type="text/javascript"> window.__lc = window.__lc || {}; window.__lc.license = 13879353; ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}; var e={_q:[ ],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){ i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])}, get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load."); return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){ var n=t.createElement("script"); n.async=!0,n.type="text/javascript", n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}}; !n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[ ].slice)) </script> 
+<noscript> <a href="https://www.livechatinc.com/chat-with/13879353/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a> </noscript> 
+<!-- End of LiveChat code -->
+
+
+</body>
+
+<script src="main.js"></script>
+
+</html>
+
+
+
