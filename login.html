@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body class="d-flex align-items-center  bg-body-secondary">
+    <main class="w-100 m-auto" style="max-width: 400px;">
+        <div class="card m-3">
+            <div class="card-body">
+
+                <form id="frmLogin" action="/test" method="get" autocomplete="off">
+                    <div class="m-1">
+                        <label class="form-label">Email</label>
+                        <input name="email" type="text" class="form-control form-control-lg" placeholder="enter the email address" required>
+                    </div>
+                    <div class="m-1">
+                        <label class="form-label">Password</label>
+                        <input name="pwd" type="password" class="form-control form-control-lg" placeholder="enter the password">
+                    </div>
+                    <div class="m-1">
+                        <button type="submit" class="btn btn-outline-primary float-end">Login</button>
+                        <button type="reset" class="btn btn-outline-primary float-end">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/jquery-3.7.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+
+    });
+</script>
+</html>

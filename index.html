@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container-fluid abc" id="main">
+        <div class="row" style="height: 100px; margin-top: 10px;">
+            <div class="col-md-12 col-lg-2" style="background-color: antiquewhite;">
+                <button class="btn btn-primary abc">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+                <button class="btn btn-primary abc">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+                <button class="btn btn-primary abc">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+                <button class="btn btn-primary abc">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+                <button class="btn btn-primary abc">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+            </div>
+            <div class="col-md-12 col-lg-4" style="background-color: aqua;"></div>
+            <div class="col-md-12 col-lg-5" style="background-color: antiquewhite;"></div>
+            <div class="col-md-12 col-lg-6" style="background-color: red;"></div>
+            <div class="col-md-6 col-lg-4" style="background-color: green;"></div>
+            <div class="col-md-6 col-lg-2" style="background-color: yellow;"></div>
+        </div>
+        <div class="abc" id="clock">
+            
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+       //alert("page has been loaded");
+
+        $("button.abc").on('click',function(){
+            alert("button has been clicked");
+        });
+    });
+
+    
+    
+
+    // alert("page is loading")
+    // alert("page is loading try 2")
+</script>
+<script>
+    var timer;
+    var textToDisplay="JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.";
+    function btnClick(){
+        // timer=null;
+        // timer=setInterval(updateTime,1000)
+        DisplayTextOneByOne();
+    }
+    
+    function DisplayTextOneByOne()
+    {
+        var counter=0;
+        var len=textToDisplay.length;
+        timer=setInterval(function(){
+            var subString=textToDisplay.substring(0, counter+1);
+            var clockElement=document.getElementById("clock")
+            clockElement.innerHTML=subString;
+            counter++;
+            
+            if(counter>=len){
+                console.log("timer has stopped")
+                clearInterval(timer);
+            }
+        },50)
+        
+    }
+    
+    function updateTime()
+    {
+        var time=new Date();
+        var clockElement=document.getElementById("clock")
+        clockElement.innerHTML="Current Time is : "+time;
+        console.log("Function is running at ",time);
+    }
+    function dblClick()
+    {
+        alert("dbl clicked")
+        
+
+    }
+
+</script>
+</html>
