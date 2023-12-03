@@ -88,7 +88,7 @@
                             <h3>Education Information</h3>
                         </div>
                     </div>
-                    <div class="row mb-1 education" id="education">
+                    <div class="row mb-1 education">
                         <div class="col-2">
                             <input type="text" class="form-control" placeholder="Name of your school" />
                         </div>
@@ -139,7 +139,7 @@
 
 
         $('.cloneeducation').on('click',function(){
-           cloneducation();
+           cloneducation($(this));
            
         });
 
@@ -149,28 +149,28 @@
         });
       
 
-        function cloneducation(){
-            $('#education').after($('#education').clone());
+        function cloneducation(education){
+            var edx=$(education.parents('div.education'));
+            edx.after(edx.clone());
             
             $('.cloneeducation').off('click');
-            $('.cloneeducation').on('click',function(){cloneducation();});
+            $('.cloneeducation').on('click',function(){cloneducation(education);});
 
             $('.deleteeducation').off('click');
             $('.deleteeducation').on('click',function(){ 
                 $($(this).parents('.education')).remove();
-            
-               refreshDeleteBtn();
+                refreshDeleteBtn();
             });
-
-          
+            refreshDeleteBtn();
                 
         }
 
         function refreshDeleteBtn(){
               //remove d-none from every delete btn in education 
+              debugger;
               for (const iterator of $('.education')) {
                 console.log($($(iterator).find('.deleteeducation')));
-                const btn=$(iterator).find('.deleteeducation');
+                const btn=$(iterator).find('button.deleteeducation');
                 $(btn).removeClass('d-none');
             }
 
